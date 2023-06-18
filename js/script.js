@@ -11,5 +11,5 @@ function weightConverter(valNum) {
 
 
   function myPopup() {
-    window.open("https://ludgranados.github.io/Powerlifting-Competition-Plates-Weight-Lifting/")
+    window.open("https://ludgranados.github.io/Powerlifting-Competition-Plates-Weight-Lifting/");
   }
