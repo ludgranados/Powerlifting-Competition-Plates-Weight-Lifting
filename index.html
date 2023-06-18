@@ -51,10 +51,18 @@
       
       <p>
         <label>Kilograms</label>
-        <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+        <input name="input1" id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
       </p>
-      <p>Pounds: <span id="outputPounds"></span></p>
-      <p>Each Side: <span id="outputSide"></span></p>
+      
+      <!-- <p>
+        <label>Bar Weight</label>
+        <input name="input2" id="inputBar" type="number" placeholder="Bar Weight" oninput="barWeight(this.value)" onchange="barWeight(this.value)">
+      </p> -->
+      
+      <p>Pounds without bar: <span id="outputPounds"></span>lbs</p>
+      <p>Pounds with 45lbs bar: <span id="outputBarPounds"></span>lbs</p>
+      <p>Weight plate on Each Side: <span id="outputSide"></span>kg</p>
+
           
     </div>
  
