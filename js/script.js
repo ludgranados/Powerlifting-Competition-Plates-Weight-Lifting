@@ -7,6 +7,7 @@
 // kg to lbs
 function weightConverter(valNum) {
     document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+    document.getElementById("outputSide").innerHTML=valNum*2.2046/2;
   }
 
 
