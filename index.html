@@ -6,14 +6,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Bootstrap css and js files -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css.map">
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="js/lib/bootstrap.min.js.map"></script>
 
     <script src="js/script.js"></script>
+    <script src="js/kilograms.js"></script>
+    <script src="js/pounds.js"></script>
+    <script src="js/percentage.js"></script>
+
     <!-- Google Fonts -->
 
     <!--title-&-css-->
@@ -51,21 +54,40 @@
       
       <p>
         <label>Kilograms</label>
-        <input name="input1" id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+        <input name="weight-kg" id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
       </p>
-      
-      <!-- <p>
-        <label>Bar Weight</label>
-        <input name="input2" id="inputBar" type="number" placeholder="Bar Weight" oninput="barWeight(this.value)" onchange="barWeight(this.value)">
-      </p> -->
       
       <p>Pounds without bar: <span id="outputPounds"></span>lbs</p>
       <p>Pounds with 45lbs bar: <span id="outputBarPounds"></span>lbs</p>
-      <p>Weight plate on Each Side: <span id="outputSide"></span>kg</p>
-
-          
+      <p>Weight plate on Each Side: <span id="outputSide"></span>kg</p> 
     </div>
+
+    <title>Add Percentage</title>
+
+    <p class="text-center">
+
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Add Percentage
+      </button>
+    </p>
+    <div class="collapse text-center" id="collapseExample">
+      <div class="card card-body align-items-center m-5 p-5">
+
+        <h1>Add Percentage</h1>
+
+        <label for="percentage">Percentage to Add:</label>
+        <input class="percentage-input m-5 px-5" type="number" id="percentage" />
+
+        <button class="percentage-button mb-5" onclick="kgPercentage()">Calculate</button>
+        <p>Weight plate on Each Side in Kilograms: <span id="outputKg"></span>kg</p>
+        <p>Weight plate on Each Side in Pounds: <span id="outputLbs"></span>lbs</p>
+
+        <div id="output"></div> 
  
+      </div>
+    </div>
+
+
     <script>
         // kg to lbs
 // function weightConverter(valNum) {
