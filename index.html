@@ -30,8 +30,8 @@
   </header>
 
 
-  <div class="logo-container" style="background-image: url(https://i.ibb.co/6BsF3b1/Logo-with-Psychology-symbol-Blog-copy2.jpg); background-size: cover;">
-    <img class="logo" src="/JPG/6E45060F-F78B-49F3-A2E0-152351FF68F5_1_105_c.jpeg" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+  <div class="logo-container m-5" style="background-image: url(https://i.ibb.co/6BsF3b1/Logo-with-Psychology-symbol-Blog-copy2.jpg); background-size: cover;">
+    <img class="logo" src="img/6E45060F-F78B-49F3-A2E0-152351FF68F5_1_105_c.jpeg" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
   </div>
 
 
@@ -46,7 +46,7 @@
     <!-- Converter -->
 
     <div class="converter-container text-center">
-      <h2>Weight Converter</h2>
+      <h2>Target Weight</h2>
       <p>Type a value in the Kilograms field to convert the value to Pounds:</p>
       
       <p>
@@ -54,14 +54,16 @@
         <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
       </p>
       <p>Pounds: <span id="outputPounds"></span></p>
+      <p>Each Side: <span id="outputSide"></span></p>
           
     </div>
  
     <script>
         // kg to lbs
-function weightConverter(valNum) {
-    document.getElementById("outputPounds").innerHTML=valNum*2.2046;
-  }
+// function weightConverter(valNum) {
+//     document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+//     document.getElementById("outputSide").innerHTML=valNum*2.2046/2;
+//   }
     </script>
 
     <!-- <h2>Weight Converter</h2>
@@ -77,8 +79,8 @@ function weightConverter(valNum) {
 
   <!-- Footer with linked E-mail, and Social Media Icon Links -->
 
- <footer class="footer text-center">
-  <p class="author-name">Author: Ludwin Granados</br>
+ <footer class="footer text-center p-5">
+  <p class="author-name text-center">Author: Ludwin Granados</br>
    <a class="footer-email" href="mailto: lgs.dexterous@gmail.com">Lgs.dexterous@gmail.com</br>
  </p>
 
