@@ -21,8 +21,10 @@
 
     <!--title-&-css-->
     <title>Media</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/percentage.css">
+    <link rel="stylesheet" href="css/target-weight.css">
+
 
   </head>
 
@@ -33,8 +35,9 @@
   </header>
 
 
-  <div class="logo-container m-5" style="background-image: url(https://i.ibb.co/6BsF3b1/Logo-with-Psychology-symbol-Blog-copy2.jpg); background-size: cover;">
-    <img class="logo" src="img/6E45060F-F78B-49F3-A2E0-152351FF68F5_1_105_c.jpeg" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+  <div class="logo-container text-center mx-5 my-1" style="background-image: url(img/6E45060F-F78B-49F3-A2E0-152351FF68F5_1_105_c.jpeg); background-size: cover;">
+    <img class="logo mt-3" src="img/Tuts-Powerlifting.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+    <h1 class="banner-title pb-3 pt-2">Powerlifting Competition Plates</h1>
   </div>
 
 
@@ -42,7 +45,7 @@
 
     <div class="title text-center m-5 p-5">
 
-      <h1>Powerlifting Competition Plates</h1>
+      <!-- <h1>Powerlifting Competition Plates</h1> -->
       
     </div>
 
@@ -50,67 +53,48 @@
 
     <div class="converter-container text-center">
       <h2>Target Weight</h2>
-      <p>Type a value in the Kilograms field to convert the value to Pounds:</p>
+      <br>
+      <!-- <p>Type a value in the Kilograms field to convert the value to Pounds:</p> -->
       
-      <p>
-        <label>Kilograms</label>
-        <input name="weight-kg" id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+      <p class="kilograms-input-container">
+        <label class="label">Kilograms:</label>
+        <input name="weight-kg" id="inputKilograms" type="number" placeholder="Type a value..." oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
       </p>
       
-      <p>Pounds without bar: <span id="outputPounds"></span>lbs</p>
-      <p>Pounds with 45lbs bar: <span id="outputBarPounds"></span>lbs</p>
-      <p>Weight plate on Each Side: <span id="outputSide"></span>kg</p> 
+      <p class="lbs">Pounds without bar: <span class="results" id="outputPounds"></span> lbs</p>
+      <p class="lbs">Pounds with 45lbs bar: <span class="results" id="outputBarPounds"></span> lbs</p>
+      <p class="kg">Weight plate on Each Side: <span class="results" id="outputSide"></span> kg</p> 
     </div>
 
     <title>Add Percentage</title>
 
     <p class="text-center">
 
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         Add Percentage
       </button>
     </p>
-    <div class="collapse text-center" id="collapseExample">
-      <div class="card card-body align-items-center m-5 p-5">
+    <div class="collapse percentage-container text-center" id="collapseExample">
+      <div class="card card-body percentage-content align-items-center m-5 p-5">
 
-        <h1>Add Percentage</h1>
+        <!-- <h1>Add Percentage</h1> -->
+        <p>
+        <label class="add-percentage-tag" for="percentage">Add Percentage:</label>
+          <input class="percentage-input my-4 px-5" type="number" id="percentage" placeholder="Type a value..."/>
 
-        <label for="percentage">Percentage to Add:</label>
-        <input class="percentage-input m-5 px-5" type="number" id="percentage" />
-
-        <button class="percentage-button mb-5" onclick="kgPercentage()">Calculate</button>
-        <p>Weight plate on Each Side in Kilograms: <span id="outputKg"></span>kg</p>
-        <p>Weight plate on Each Side in Pounds: <span id="outputLbs"></span>lbs</p>
-
-        <div id="output"></div> 
+        </p>
+ 
+        <button class="percentage-button btn btn-light mb-5" onclick="kgPercentage()">Calculate</button>
+        <p class="kg">Weight plate on Each Side in Kilograms: <span class="results" id="outputKg"></span> kg</p>
+        <p class="lbs">Weight plate on Each Side in Pounds: <span class="results" id="outputLbs"></span> lbs</p>
  
       </div>
     </div>
 
-
-    <script>
-        // kg to lbs
-// function weightConverter(valNum) {
-//     document.getElementById("outputPounds").innerHTML=valNum*2.2046;
-//     document.getElementById("outputSide").innerHTML=valNum*2.2046/2;
-//   }
-    </script>
-
-    <!-- <h2>Weight Converter</h2>
-    <p>Type a value in the Pounds field to convert the value to Kilograms:</p>
-    
-    <p>
-      <label>Pounds</label>
-      <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
-    </p>
-    <p>Kilograms: <span id="outputKilograms"></span></p>
- -->
-
-
   <!-- Footer with linked E-mail, and Social Media Icon Links -->
 
  <footer class="footer text-center p-5">
-  <p class="author-name text-center">Author: Ludwin Granados</br>
+  <p class="author-name text-center py-3">© Tuts & Boots, 2023</br>
    <a class="footer-email" href="mailto: lgs.dexterous@gmail.com">Lgs.dexterous@gmail.com</br>
  </p>
 
