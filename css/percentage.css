@@ -1,0 +1,16 @@
+.percentage-container {
+    .percentage-content {
+        .add-percentage-tag {
+            font-weight: bold;
+        }
+        .percentage-input {
+            width: 220px;
+        }
+    }
+    .lbs, .kg {
+        font-weight: bold;
+        .results {
+            font-weight: 400;
+        }
+    }
+}

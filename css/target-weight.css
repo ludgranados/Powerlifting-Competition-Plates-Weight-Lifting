@@ -1,0 +1,17 @@
+.converter-container {
+    .kilograms-input-container {
+        .label {
+            font-weight: bold;
+        }
+    }
+    .lbs, .kg {
+        font-weight: bold;
+        .results {
+            font-weight: 400;
+        }
+    }
+}
+.btn {
+    background: #5a6778;
+    color: #fff;
+}

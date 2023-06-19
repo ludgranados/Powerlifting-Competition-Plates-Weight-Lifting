@@ -4,20 +4,36 @@
 
 .logo-container, .converter-container {
     text-align-last: center;
+    border-radius: 20%;
 }
 .logo {
+    border-width: thin;
 border-radius: 50%;
+height: 155px;
+border-top-width: thick;
+object-fit: cover;
 
+
+}
+.banner-title {
+    text-align: center;
+    color: #fff;
+    font-family: fantasy;
+    text-shadow: 0px 1px 1px red;
 }
 .title {
     text-align: center;
 }
 
-.author-name {
-    background: gray;
-    color: #fff;
-    text-align: center;
+/* footer */
+.footer {
+    .author-name {
+        background: gray;
+        color: #fff;
+        border-radius: 20%;
+    }
+    .footer-email {
+        color: #fff;
+    }    
 }
-.footer-email {
-    color: #fff;
-}
+
