@@ -16,12 +16,14 @@
     <script src="js/kilograms.js"></script>
     <script src="js/pounds.js"></script>
     <script src="js/percentage.js"></script>
+    <script src="js/distribute-total.js"></script>
 
     <!--title-&-css-->
     <title>Media</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/percentage.css">
     <link rel="stylesheet" href="css/target-weight.css">
+    <link rel="stylesheet" href="css/plate-colors.css">
 
   </head>
 
@@ -60,28 +62,147 @@
 
     <title>Add Percentage</title>
 
-    <p class="text-center">
+   <div class="d-flex text-center justify-content-center row">
+   
+      <p class="text-center">
 
-      <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Add Percentage
-      </button>
-    </p>
-    <div class="collapse percentage-container text-center" id="collapseExample">
-      <div class="card card-body percentage-content align-items-center m-5 p-5">
+        <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlates" aria-expanded="false" aria-controls="collapsePlates">
+          Weight Plates
+        </button>
 
-        <!-- <h1>Add Percentage</h1> -->
-        <p>
-        <label class="add-percentage-tag" for="percentage">Add Percentage:</label>
-          <input class="percentage-input my-4 px-5" type="number" id="percentage" placeholder="Type a value..."/>
+        <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
+          Add Percentage
+        </button>
 
-        </p>
- 
-        <button class="percentage-button btn btn-light mb-5" onclick="kgPercentage()">Calculate</button>
-        <p class="kg">Weight plate on Each Side in Kilograms: <span class="results" id="outputKg"></span> kg</p>
-        <p class="lbs">Weight plate on Each Side in Pounds: <span class="results" id="outputLbs"></span> lbs</p>
- 
-      </div>
-    </div>
+      </p>
+        <div class="collapse percentage-container text-center" id="collapsePlates">
+          <div class="card card-body percentage-content align-items-center m-5 p-5">
+
+            <div class="text-center p-5">
+                <label>Weight Plates on each side</label>
+                <hr>
+        
+                <div class="amount25" id="25">25 kg: 
+                  <p>
+                  <img class="plate-image" src="img/25.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                  <br>
+                  <span id="amount25"></span>
+                  <hr>
+                  </p>    
+                </div>
+
+                <div class="amount20" id="20">20 kg: 
+                  <p>
+                    <img class="plate-image" src="img/20.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount20"></span>   
+                    <hr>                 
+                  </p>
+
+                </div>
+
+                <div>15 kg: 
+                  <p>
+                    <img class="plate-image" src="img/15.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount15"></span>
+                    <hr>
+                  </p>                  
+                </div>
+
+                <div>10 kg: 
+                  <p>
+                    <img class="plate-image" src="img/10.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount10"></span> 
+                    <hr>          
+                  </p>
+                </div>
+
+                <div>5 kg: 
+                  <p>
+                    <img class="plate-image" src="img/5.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount5"></span>
+                    <hr>
+                  </p>
+                </div>
+
+                <div>2.5 kg: 
+                  <p>
+                    <img class="plate-image" src="img/2.5.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount212"></span>   
+                    <hr>        
+                  </p>
+                </div>
+
+                <div>2 kg: 
+                  <p>
+                    <img class="plate-image" src="img/2.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount2"></span>
+                    <hr>
+                  </p>
+                </div>
+
+                <div>1.5 kg: 
+                  <p>
+                    <img class="plate-image" src="img/1.5.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount112"></span>
+                    <hr>
+                  </p>
+                </div>
+
+                <div>1 kg: 
+                  <p>
+                    <img class="plate-image" src="img/1.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount1"></span>
+                    <hr>
+                  </p> 
+                </div>
+
+                <div>0.5 kg: 
+                  <p>
+                    <img class="plate-image" src="img/0.5.png" alt="Logo-Makr-73-Bgk8" border="0" width="200" height="110">
+                    <br>
+                    <span id="amount12"></span>
+                    <hr>
+                  </p>
+                </div>
+
+            </div>
+
+          </div>        
+        </div>
+
+          <div class="collapse percentage-container text-center" id="collapse">
+            <div class="card card-body percentage-content align-items-center m-5 p-5">
+
+              <!-- <h1>Add Percentage</h1> -->
+              <p>
+              <label class="add-percentage-tag" for="percentage">Add Percentage:</label>
+                <input class="percentage-input my-4 px-5" type="number" id="percentage" placeholder="Type a value..."/>
+
+              </p>
+      
+              <button class="percentage-button btn btn-light mb-5" onclick="kgPercentage()">Calculate</button>
+              <p class="kg">Weight plate on Each Side in Kilograms: <span class="results" id="outputKg"></span> kg</p>
+              <p class="lbs">Weight plate on Each Side in Pounds: <span class="results" id="outputLbs"></span> lbs</p>
+      
+            </div>
+          </div>      
+      
+
+
+
+
+
+
+   </div>
+  
 
   <!-- Footer with linked E-mail, and Social Media Icon Links -->
 
