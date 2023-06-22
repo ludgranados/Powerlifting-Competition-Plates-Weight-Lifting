@@ -78,6 +78,22 @@ function weightConverter(valNum) {
     amount25Element.textContent = amount25;
     let amount20Element = document.getElementById('amount20');
     amount20Element.textContent = amount20;
+    let amount15Element = document.getElementById('amount15');
+    amount15Element.textContent = amount15;
+    let amount10Element = document.getElementById('amount10');
+    amount10Element.textContent = amount10;
+    let amount5Element = document.getElementById('amount5');
+    amount5Element.textContent = amount5;
+    let amount212Element = document.getElementById('amount212');
+    amount212Element.textContent = amount212;
+    let amount2Element = document.getElementById('amount2');
+    amount2Element.textContent = amount2;
+    let amount112Element = document.getElementById('amount112');
+    amount112Element.textContent = amount20;
+    let amount1Element = document.getElementById('amount1');
+    amount1Element.textContent = amount1;
+    let amount12Element = document.getElementById('amount12');
+    amount12Element.textContent = amount12;
 
     let divAmount25Element = document.getElementById('divAmount25');
     if (amount25 > 0) {
